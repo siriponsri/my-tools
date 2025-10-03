@@ -5,7 +5,7 @@
 ใช้เพียง 2 บรรทัด!
 
 ```python
-!wget https://raw.githubusercontent.com/YOUR_USERNAME/kaggle-utils/main/kaggle_utils_single.py
+!wget https://raw.githubusercontent.com/siriponsri/my-tools/main/kaggle_utils_single.py
 from kaggle_utils_single import *
 ```
 

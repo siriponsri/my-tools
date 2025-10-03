@@ -22,7 +22,7 @@ Universal toolkit for Kaggle competitions - เหมาะสำหรับผ
 ใช้เพียง **2 บรรทัด** บน Colab/Kaggle:
 
 ```python
-!wget https://raw.githubusercontent.com/YOUR_USERNAME/kaggle-utils/main/kaggle_utils_single.py
+!wget https://raw.githubusercontent.com/siriponsri/my-tools/main/kaggle_utils_single.py
 from kaggle_utils_single import *
 ```
 
@@ -44,8 +44,8 @@ pip install -e .
 # Full installation (with LightGBM, XGBoost, CatBoost, Optuna)
 pip install -e ".[full]"
 
-# Or install from GitHub (เมื่อ upload แล้ว)
-pip install git+https://github.com/yourusername/kaggle-utils.git
+# Or install from GitHub
+pip install git+https://github.com/siriponsri/my-tools.git
 ```
 
 **ข้อดี:**

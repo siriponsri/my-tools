@@ -3,7 +3,7 @@
 ชุดเครื่องมือสำหรับมือใหม่หัดแข่ง Kaggle (รวมไว้ในไฟล์เดียว)
 
 Quick Start:
-    !wget https://raw.githubusercontent.com/YOUR_USERNAME/kaggle-utils/main/kaggle_utils_single.py
+    !wget https://raw.githubusercontent.com/siriponsri/my-tools/main/kaggle_utils_single.py
     from kaggle_utils_single import *
 
 Version: 1.0.0

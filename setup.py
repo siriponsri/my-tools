@@ -11,7 +11,7 @@ setup(
     description="ชุดเครื่องมือสำหรับมือใหม่หัดแข่ง Kaggle - Universal toolkit for Kaggle competitions",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/kaggle-utils",
+    url="https://github.com/siriponsri/my-tools",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
