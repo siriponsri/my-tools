@@ -1,8 +1,8 @@
-# 📊 Metrics Guide
+# Metrics Guide
 
 คู่มือการใช้งาน Evaluation Metrics สำหรับ Kaggle Competitions
 
-## 📚 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Regression Metrics](#regression-metrics)

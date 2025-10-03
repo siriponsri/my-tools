@@ -2,7 +2,7 @@
 
 คู่มือการปรับ hyperparameters สำหรับโมเดล Machine Learning
 
-## 📚 Table of Contents
+## Table of Contents
 - [Overview](#overview)
 - [Available Methods](#available-methods)
 - [Grid Search](#grid-search)

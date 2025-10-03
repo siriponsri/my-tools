@@ -2,7 +2,7 @@
 
 คู่มือการใช้งาน Utility Functions สำหรับ Kaggle Competitions
 
-## 📚 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Environment Setup](#environment-setup)

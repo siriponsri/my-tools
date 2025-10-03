@@ -1,23 +1,53 @@
-# 🚀 Kaggle Utils
+# Kaggle Utils
 
-**ชุดเครื่องมือสำหรับมือใหม่หัดแข่ง Kaggle** 🎯
-
-Universal toolkit for Kaggle competitions - เหมาะสำหรับผู้เริ่มต้นและผู้ที่ต้องการทำ baseline ได้รวดเร็ว
+**A comprehensive toolkit for Kaggle competitions designed for beginners and rapid baseline development.**
 
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/siriponsri/my-tools.svg)](https://github.com/siriponsri/my-tools/stargazers)
 
-## ✨ Features
+---
 
-- 🎯 **สำหรับมือใหม่** - เริ่มต้นแข่ง Kaggle ได้ง่าย ไม่ต้องเขียนโค้ดซ้ำๆ
-- 🔍 **Data Diagnostics** - ตรวจสอบคุณภาพข้อมูล ตรวจจับ leakage อัตโนมัติ
-- 🤖 **Model Wrappers** - Train models พร้อม CV ในบรรทัดเดียว
-- 🎨 **Interactive Viz** - Visualizations แบบ interactive ด้วย Plotly
-- ⚡ **Fast & Easy** - ประหยัดเวลา focus ที่ feature engineering และ modeling
+## Table of Contents
 
-## 📦 Installation
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Modules](#modules)
+- [API Reference](#api-reference)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
 
-### 🚀 Quick Start (สำหรับ Colab/Kaggle) - แนะนำ!
+---
+
+## Overview
+
+Kaggle Utils is a Python library that provides a unified interface for common machine learning workflows in Kaggle competitions. It abstracts away boilerplate code while maintaining flexibility and following best practices.
+
+**Target Audience:**
+- Beginners learning Kaggle competitions
+- Data scientists who want rapid baseline development
+- Anyone tired of writing repetitive preprocessing and modeling code
+
+**Design Philosophy:**
+- **Simple:** Intuitive API that's easy to learn
+- **Fast:** Get from data to submission in minutes
+- **Flexible:** Extensible for custom needs
+- **Educational:** Built-in diagnostics teach best practices
+
+## Key Features
+
+- **สำหรับมือใหม่** - เริ่มต้นแข่ง Kaggle ได้ง่าย ไม่ต้องเขียนโค้ดซ้ำๆ
+- **Data Diagnostics** - ตรวจสอบคุณภาพข้อมูล ตรวจจับ leakage อัตโนมัติ
+- **Model Wrappers** - Train models พร้อม CV ในบรรทัดเดียว
+- **Interactive Viz** - Visualizations แบบ interactive ด้วย Plotly
+- **Fast & Easy** - ประหยัดเวลา focus ที่ feature engineering และ modeling
+
+## Installation
+
+### Quick Start (สำหรับ Colab/Kaggle) - แนะนำ!
 
 ใช้เพียง **2 บรรทัด** บน Colab/Kaggle:
 
@@ -27,15 +57,15 @@ from kaggle_utils_single import *
 ```
 
 **ข้อดี:**
-- ⚡ รวดเร็ว (ไม่ต้อง install)
-- 🎯 มี functions หลักๆ ครบ
-- 💡 เหมาะสำหรับ quick experiments
+- รวดเร็ว (ไม่ต้อง install)
+- มี functions หลักๆ ครบ
+- เหมาะสำหรับ quick experiments
 
-📖 **[อ่านคู่มือ Single-File Version →](docs/single_file_guide.md)**
+**[อ่านคู่มือ Single-File Version →](docs/single_file_guide.md)**
 
 ---
 
-### 📦 Full Package Installation (สำหรับ Local/Production)
+### Full Package Installation (สำหรับ Local/Production)
 
 ```bash
 # Basic installation (scikit-learn only)
@@ -49,12 +79,12 @@ pip install git+https://github.com/siriponsri/my-tools.git
 ```
 
 **ข้อดี:**
-- 🎨 Features ครบทั้งหมด (100+ functions)
-- 🤖 Model wrappers, Ensemble, Hyperparameter tuning
-- 📊 Interactive visualizations
-- 🔧 Production-ready
+- Features ครบทั้งหมด (100+ functions)
+- Model wrappers, Ensemble, Hyperparameter tuning
+- Interactive visualizations
+- Production-ready
 
-## 🎯 Quick Start
+## Quick Start
 
 ```python
 from kaggle_utils import *
@@ -67,7 +97,7 @@ setup_kaggle()
 train = load_data('train.csv', show_info=True)
 test = load_data('test.csv')
 
-# 3. 🔍 ตรวจสอบข้อมูล (สำหรับมือใหม่!)
+# 3. ตรวจสอบข้อมูล (สำหรับมือใหม่!)
 report = quick_diagnosis(train, target_col='price', test_df=test)
 # จะแนะนำว่าควรทำอะไรต่อ!
 
@@ -92,9 +122,9 @@ create_submission(
 )
 ```
 
-## 📚 Modules Overview
+## Modules Overview
 
-### 1. 🔧 Preprocessing (`preprocessing.py`)
+### 1. Preprocessing (`preprocessing.py`)
 
 **Data Inspection & Cleaning:**
 - `quick_info()` - แสดงข้อมูลสรุป missing values, dtypes
@@ -109,11 +139,11 @@ create_submission(
 - `target_encode()` - Target encoding with smoothing
 - `auto_feature_selection()` - เลือก features อัตโนมัติ
 
-📖 **[อ่านคู่มือเต็ม →](docs/preprocessing_guide.md)**
+**[อ่านคู่มือเต็ม →](docs/preprocessing_guide.md)**
 
 ---
 
-### 2. 🤖 Models (`models.py`)
+### 2. Models (`models.py`)
 
 **Scikit-Learn Wrappers (with built-in CV):**
 - `SKLearnWrapper` - Universal wrapper สำหรับ sklearn models
@@ -130,11 +160,11 @@ create_submission(
 - `quick_classification_comparison()` - สำหรับ classification
 - `compare_scalers()` - เปรียบเทียบ scalers
 
-📖 **[อ่านคู่มือเต็ม →](docs/models_guide.md)**
+**[อ่านคู่มือเต็ม →](docs/models_guide.md)**
 
 ---
 
-### 3. 🎯 Ensemble (`ensemble.py`)
+### 3. Ensemble (`ensemble.py`)
 
 **Ensemble Methods:**
 - `WeightedEnsemble` - Weighted average ensemble
@@ -146,11 +176,11 @@ create_submission(
 - `blend_predictions()` - Average, rank, geometric mean
 - `optimize_blend_weights()` - หาน้ำหนักที่ดีที่สุด
 
-📖 **[อ่านคู่มือเต็ม →](docs/ensemble_guide.md)**
+**[อ่านคู่มือเต็ม →](docs/ensemble_guide.md)**
 
 ---
 
-### 4. 🔍 Outliers (`outliers.py`)
+### 4. Outliers (`outliers.py`)
 
 **Detection Methods:**
 - `detect_outliers_iqr()` - IQR method (classic)
@@ -164,11 +194,11 @@ create_submission(
 - `plot_outliers()` - Interactive outlier visualization
 - `outlier_summary()` - สรุปรายงาน outliers
 
-📖 **[อ่านคู่มือเต็ม →](docs/outliers_guide.md)**
+**[อ่านคู่มือเต็ม →](docs/outliers_guide.md)**
 
 ---
 
-### 5. ⚙️ Hyperparameters (`hyperparams.py`)
+### 5. Hyperparameters (`hyperparams.py`)
 
 **Tuning Methods:**
 - `tune_hyperparameters()` - All-in-one tuning function
@@ -182,11 +212,11 @@ create_submission(
 - `suggest_params_catboost()` - CatBoost params
 - `suggest_params_random_forest()` - Random Forest params
 
-📖 **[อ่านคู่มือเต็ม →](docs/hyperparams_guide.md)**
+**[อ่านคู่มือเต็ม →](docs/hyperparams_guide.md)**
 
 ---
 
-### 6. 🎨 Visualization (`visualization.py`)
+### 6. Visualization (`visualization.py`)
 
 **Interactive Plots (Plotly):**
 - `plot_feature_importance()` - Feature importance (single/comparison)
@@ -197,11 +227,11 @@ create_submission(
 - `plot_roc_curve()` - ROC curve
 - `plot_predictions()` - Actual vs predicted
 
-📖 **[อ่านคู่มือเต็ม →](docs/visualization_guide.md)**
+**[อ่านคู่มือเต็ม →](docs/visualization_guide.md)**
 
 ---
 
-### 7. 📊 Metrics (`metrics.py`)
+### 7. Metrics (`metrics.py`)
 
 **Regression Metrics:**
 - `rmse()`, `mae()`, `mape()`, `rmsle()`, `r2_score_custom()`
@@ -215,11 +245,11 @@ create_submission(
 **Kaggle-Specific:**
 - `kaggle_metric()` - ใช้ metric ตามที่ competition กำหนด
 
-📖 **[อ่านคู่มือเต็ม →](docs/metrics_guide.md)**
+**[อ่านคู่มือเต็ม →](docs/metrics_guide.md)**
 
 ---
 
-### 8. 🔍 Diagnostics (`diagnostics.py`) - **สำหรับมือใหม่!** ⭐
+### 8. Diagnostics (`diagnostics.py`) - **สำหรับมือใหม่!**
 
 **Data Quality:**
 - `check_data_quality()` - ตรวจสอบคุณภาพข้อมูลโดยรวม
@@ -232,13 +262,13 @@ create_submission(
 - `plot_learning_curve()` - Learning curve analysis
 
 **All-in-One:**
-- `quick_diagnosis()` - 🌟 **วินิจฉัยครบจบในฟังก์ชันเดียว!**
+- `quick_diagnosis()` - **วินิจฉัยครบจบในฟังก์ชันเดียว!**
 
-📖 **[อ่านคู่มือเต็ม →](docs/diagnostics_guide.md)**
+**[อ่านคู่มือเต็ม →](docs/diagnostics_guide.md)**
 
 ---
 
-### 9. 🛠️ Utils (`utils.py`)
+### 9. Utils (`utils.py`)
 
 **Environment Setup:**
 - `setup_colab()` - Setup Google Colab
@@ -262,11 +292,11 @@ create_submission(
 - `set_seed()` - Set random seed
 - `notify()` - ส่ง notification (Colab)
 
-📖 **[อ่านคู่มือเต็ม →](docs/utils_guide.md)**
+**[อ่านคู่มือเต็ม →](docs/utils_guide.md)**
 
 ---
 
-## 💡 Usage Examples
+## Usage Examples
 
 ### Example 1: สำหรับมือใหม่ - Complete Pipeline
 
